@@ -48,3 +48,4 @@ else:
     kmap = fill_kmap(kmap, minterms, r, c)
 
     print_kmap(kmap, r, c)
+ 
