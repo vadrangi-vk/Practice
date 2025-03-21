@@ -1,0 +1,79 @@
+https://electrically4u.com/sr-flip-flop-circuit-truth-table-and-operation/
+
+
+### What is a Flip-Flop?
+
+A **flip-flop** is a basic **digital memory** element that can store one bit of information: either a **0** or a **1**. It's like a tiny switch that remembers its state (0 or 1) until told to change.
+
+Think of it like a light switch:
+- If the light switch is **on**, it represents a **1**.
+- If the light switch is **off**, it represents a **0**.
+
+The flip-flop has two main functions:
+1. **Store** the value (either 0 or 1).
+2. **Change** the value when triggered by a clock pulse or certain inputs.
+
+### How Flip-Flops Work
+
+A flip-flop has **inputs** (signals it listens to) and an **output** (the value it stores). The state of the flip-flop can change only under certain conditions, typically controlled by a **clock signal**.
+
+Here’s how different types of flip-flops work:
+
+### 1. **D Flip-Flop (Data Flip-Flop)**
+- **Purpose**: The D flip-flop stores the value of a single input bit (`D`) when triggered by a clock pulse.
+- **How it works**:
+  - When the **clock signal** is high (on), the flip-flop "captures" the value of `D` and stores it as its output `Q`.
+  - If the clock signal is low (off), the output doesn’t change.
+
+  **Example**: If `D = 1` and the clock pulse comes, the output `Q` will become 1 and stay there, even if `D` changes later, until the next clock pulse.
+
+### 2. **JK Flip-Flop**
+- **Purpose**: The JK flip-flop is a more versatile flip-flop with two inputs: `J` and `K`.
+- **How it works**: It has the following behavior:
+  - If **J = 0, K = 0**, the output stays the same (no change).
+  - If **J = 0, K = 1**, the output becomes **0** (reset).
+  - If **J = 1, K = 0**, the output becomes **1** (set).
+  - If **J = 1, K = 1**, the output **toggles** (changes to the opposite of what it was).
+
+  **Example**: If the flip-flop was previously storing a `0` and `J = 1, K = 1` when the clock pulse happens, the output will change to `1`.
+
+### 3. **T Flip-Flop (Toggle Flip-Flop)**
+- **Purpose**: The T flip-flop is a simplified version of the JK flip-flop that only has one input, `T`.
+- **How it works**:
+  - If **T = 0**, the output stays the same (no change).
+  - If **T = 1**, the output **toggles** (switches to the opposite value).
+
+  **Example**: If `Q = 0` and `T = 1` when the clock pulse occurs, `Q` will change to `1`. If `Q = 1` and `T = 1`, `Q` will change back to `0`.
+
+### Key Features of Flip-Flops:
+- **Memory**: Flip-flops can hold a bit of information and only change it when triggered (usually by a clock signal).
+- **Clock Control**: Most flip-flops are controlled by a **clock** that determines when the flip-flop should update its state.
+- **State Changes**: Flip-flops change their state based on their inputs, but only when triggered by the clock (or other control signals).
+
+### Simple Analogy:
+
+Imagine a **light bulb** that is controlled by a **flip-flop**:
+- The flip-flop's **state** is whether the light is on (1) or off (0).
+- The **clock** is like a button that decides when the light can change its state. When you press the button (clock pulse), the light can turn on or off depending on the flip-flop's input.
+- If the flip-flop's input is set to keep the light on, it will remain on even after you stop pressing the button, until another input tells it to turn off.
+
+### Summary
+- A **flip-flop** is a digital circuit that **remembers** a single bit of information.
+- It changes its state based on inputs and a clock signal.
+- Different types of flip-flops (like **D**, **JK**, and **T**) behave differently based on the inputs they receive, and they are used to store and control data in digital systems.
+
+
+
+
+
+
+
+
+
+
+eature	Combinational Circuits	Sequential Circuits
+Output Dependency	Depends only on the current inputs.	Depends on both the current inputs and the previous state.
+Memory	No memory; output changes immediately.	Has memory; output depends on history.
+Clocking	Does not require a clock signal.	Often requires a clock signal (for synchronous circuits).
+Examples	Logic gates, adders, multiplexers, encoders.	Flip-flops, counters, registers, state machines.
+Behavior	Instantaneous response to inputs.	Response is delayed and depends on previous states.
